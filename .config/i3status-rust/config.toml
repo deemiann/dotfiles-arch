@@ -1,0 +1,28 @@
+#theme = "solarized-dark"
+#icons = "awesome"
+[theme]
+theme = "plain"
+
+[theme.overrides]
+idle_bg = "#1C1C1C"
+idle_fg = "#ebdbb2"
+info_bg = "#458588"
+info_fg = "#ffffff"
+good_bg = "#98971a"
+good_fg = "#ffffff"
+warning_bg = "#d79921"
+warning_fg = "#282828"
+critical_bg = "#cc241d"
+critical_fg = "#ffffff"
+# Separadores
+#separator = "|"
+separator = " "
+separator_fg = "#ebdbb2"
+separator_bg = "#1C1C1C"
+
+[[block]]
+block = "time"
+interval = 60
+[block.format]
+full = "$timestamp.datetime(f:' %a %Y-%m-%d %R ')"
+
