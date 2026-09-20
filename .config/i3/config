@@ -42,8 +42,8 @@ hide_edge_borders smart
 
 client.focused          #689d6a #689d6a #1c1c1c #458588 #689d6a
 client.unfocused        #1c1c1c #1c1c1c #a89984 #1c1c1c #1c1c1c
-client.focused_inactive #689d6a #1c1c1c #83a598 #ff0000 #1c1c1c
-client.urgent           #ff0000 #cc241d #ffffff #cc241d #ff0000
+client.focused_inactive #689d6a #1c1c1c #83a598 #1c1c1c #1c1c1c
+client.urgent           #1c1c1c #cc241d #ffffff #cc241d #1c1c1c
 
 exec_always --no-startup-id feh -B "#1c1c1c" --bg-center ~/Images/archlinux_logo.png 
 
