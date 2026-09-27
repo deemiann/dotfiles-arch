@@ -24,5 +24,4 @@ separator_bg = "#1C1C1C"
 block = "time"
 interval = 60
 [block.format]
-full = "$timestamp.datetime(f:' %a %Y-%m-%d %R ')"
-
+full = "$timestamp.datetime(f:' %R │ %a %d-%m-%Y ', l:'es_ES')"

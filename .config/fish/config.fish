@@ -1,22 +1,14 @@
-#
-# ~/.bashrc
-#
-
 # Si estamos en la primera terminal de texto (TTY1), arranca X automáticamente
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-    exec startx >/dev/null 2>&1
-fi
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec startx >/dev/null 2>&1
+    end
+end
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+set -g fish_greeting ""
+zoxide init fish | source
 
-eval "$(dircolors -b ~/.dircolors)"
- 
-PS1='\[\e[1;94m\]\w \[\e[1;96m\]>\[\e[0;97m\] '
-
-alias ls='ls --color=auto'
-alias ll='ls -lh'
-alias la='ls -la'
+# Alias
 alias grep='grep --color=auto'
 alias cl='clear'
 alias ssn='sudo shutdown now'
@@ -29,4 +21,3 @@ alias brs='brightnessctl s'
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias ncuh="nmcli connection up Hotspot"
 alias ncdh="nmcli connection down Hotspot"
-

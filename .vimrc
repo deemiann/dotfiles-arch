@@ -1,14 +1,28 @@
 syntax on
 inoremap jk <ESC>
 set encoding=utf-8
-set termguicolors
-set background=dark
 set nocompatible
 
 set number
 set relativenumber
-set cursorline
-colorscheme retrobox
+set background=dark
+"colorscheme retrobox
+
+" --- CONFIGURACIÓN DE COLORES PARA TTY Y TMUX ---
+if &term == 'linux' || &term =~ 'screen' || &term =~ 'tmux'
+    " Apagamos termguicolors porque True Color (24 bits) rompe la TTY física
+    set notermguicolors
+    " Forzamos a Vim a usar el modo de color compatible con la TTY
+    set t_Co=16
+    " Cargamos retrobox en su modo adaptado a TTY
+    colorscheme retrobox
+else
+    " Esto se aplicará solo si alguna vez abres un entorno gráfico (GUI)
+    set termguicolors
+    colorscheme retrobox
+    set cursorline
+endif
+
 
 set tabstop=4
 set shiftwidth=4
