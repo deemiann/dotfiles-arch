@@ -35,3 +35,4 @@ thunar
 tumbler
 libreoffice-still
 geeqie
+zram-generator
