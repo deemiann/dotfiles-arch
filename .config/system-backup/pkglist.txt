@@ -22,6 +22,14 @@ fish
 zoxide
 tmux
 ttf-jetbrains-mono-nerd
+vlc
+vlc-plugin-ffmpeg
+thunar
+tumbler
+libreoffice-still
+geeqie
+zram-generator
+less
 texlive-latex
 texlive-latexextra
 texlive-fontsrecommended
@@ -30,10 +38,3 @@ texlive-langspanish
 texlive-binextra
 texlive-bibtexextra
 biber
-vlc
-vlc-plugin-ffmpeg
-thunar
-tumbler
-libreoffice-still
-geeqie
-zram-generator

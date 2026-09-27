@@ -96,4 +96,12 @@ xorg-server
 xorg-xinit
 xorg-xset
 zoxide
-
+---------------
+texlive-latex
+texlive-latexextra
+texlive-fontsrecommended
+texlive-fontsextra
+texlive-langspanish
+texlive-binextra
+texlive-bibtexextra
+biber
