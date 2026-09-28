@@ -139,28 +139,6 @@ echo "[+] Instalando Brave..."
 yay -S --needed --noconfirm brave-bin
 
 # ------------------------------------------------------------
-# 12. Instalar fuente de consola
-# ------------------------------------------------------------
-
-CONSOLE_FONT="$HOME/.config/system-backup/Lat2-Fixed16.psf.gz"
-CONSOLE_FONT_DIR="/usr/share/kbd/consolefonts"
-
-if [[ -f "$CONSOLE_FONT" ]]; then
-
-    echo
-    echo "[+] Instalando fuente de consola..."
-
-    sudo mkdir -p "$CONSOLE_FONT_DIR"
-
-    sudo cp "$CONSOLE_FONT" \
-        "$CONSOLE_FONT_DIR/Lat2-Fixed16.psf.gz"
-
-else
-    echo "[!] No se encontró:"
-    echo "    $CONSOLE_FONT"
-fi
-
-# ------------------------------------------------------------
 # 13. Instalar configuración Xorg
 # ------------------------------------------------------------
 
