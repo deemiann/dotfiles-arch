@@ -190,21 +190,6 @@ else
 fi
 
 # ------------------------------------------------------------
-# 14. Instalar xorg.conf si existe
-# ------------------------------------------------------------
-
-XORG_CONF="$HOME/.config/system-backup/xorg.conf"
-
-if [[ -f "$XORG_CONF" ]]; then
-
-    echo
-    echo "[+] Instalando /etc/X11/xorg.conf..."
-
-    sudo cp "$XORG_CONF" /etc/X11/xorg.conf
-
-fi
-
-# ------------------------------------------------------------
 # 15. Instalar zram-generator
 # ------------------------------------------------------------
 
