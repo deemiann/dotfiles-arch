@@ -21,3 +21,9 @@ alias brs='brightnessctl s'
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias ncuh="nmcli connection up Hotspot"
 alias ncdh="nmcli connection down Hotspot"
+
+# Iniciar tmux automáticamente si no estamos ya dentro de una sesión de tmux
+#if status is-interactive
+#    and not set -q TMUX
+#    exec tmux
+#end
