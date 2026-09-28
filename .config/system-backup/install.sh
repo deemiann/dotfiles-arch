@@ -65,41 +65,6 @@ config() {
 }
 
 # ------------------------------------------------------------
-# 6. Respaldar archivos existentes que serán reemplazados
-# ------------------------------------------------------------
-
-echo "[+] Comprobando archivos existentes..."
-
-mkdir -p "$BACKUP_DIR"
-
-while IFS= read -r file; do
-
-    # Ignorar archivos vacíos
-    [[ -z "$file" ]] && continue
-
-    target="$HOME/$file"
-
-    if [[ -e "$target" || -L "$target" ]]; then
-
-        # Si el archivo ya es exactamente igual al del repositorio,
-        # no es necesario moverlo.
-        if config diff --quiet -- "$file" 2>/dev/null; then
-            continue
-        fi
-
-        # Crear directorio de respaldo manteniendo estructura
-        backup="$BACKUP_DIR/$file"
-
-        mkdir -p "$(dirname "$backup")"
-
-        echo "    Respaldo: ~/$file"
-
-        mv "$target" "$backup"
-    fi
-
-done < <(config ls-files)
-
-# ------------------------------------------------------------
 # 7. Checkout de los dotfiles
 # ------------------------------------------------------------
 
