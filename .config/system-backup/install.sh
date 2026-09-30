@@ -139,6 +139,39 @@ echo "[+] Instalando Brave..."
 yay -S --needed --noconfirm brave-bin
 
 # ------------------------------------------------------------
+# 12. Instalar fuente de consola y aplicar configuración permanentemente
+# ------------------------------------------------------------
+
+CONSOLE_FONT="$HOME/.config/system-backup/Lat2-Fixed16.psf.gz"
+CONSOLE_FONT_DIR="/usr/share/kbd/consolefonts"
+VCONSOLE_CONF="/etc/vconsole.conf"
+
+if [[ -f "$CONSOLE_FONT" ]]; then
+
+    echo
+    echo "[+] Instalando fuente de consola..."
+    sudo mkdir -p "$CONSOLE_FONT_DIR"
+    sudo cp "$CONSOLE_FONT" "$CONSOLE_FONT_DIR/Lat2-Fixed16.psf.gz"
+
+    echo "[+] Añadiendo FONT a $VCONSOLE_CONF..."
+    # Limpia cualquier entrada de FONT existente por seguridad
+    if [[ -f "$VCONSOLE_CONF" ]]; then
+        sudo sed -i '/^FONT=/d' "$VCONSOLE_CONF"
+    fi
+    # Agrega la fuente al final del archivo
+    echo "FONT=Lat2-Fixed16" | sudo tee -a "$VCONSOLE_CONF" > /dev/null
+
+    echo "[+] Regenerando initramfs con mkinitcpio..."
+    # -P actualiza todos los perfiles de kernel instalados por seguridad
+    sudo mkinitcpio -P
+
+else
+    echo "[!] No se encontró:"
+    echo "    $CONSOLE_FONT"
+fi
+
+
+# ------------------------------------------------------------
 # 13. Instalar configuración Xorg
 # ------------------------------------------------------------
 
