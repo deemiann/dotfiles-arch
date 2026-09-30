@@ -1,11 +1,13 @@
+# ──────────────────────────────────────────────────────────────────
+
 [font]
 #size = 10
 size = 9
 [font.normal]
 #family = "DejaVu Sans Mono Book"
 family = "JetBrainsMono Nerd Font"
-#style = "Bold"
 
+#-------------------Dark MODE--------------------------------
 [colors.primary]
 background = "#1c1c1c"
 foreground = "#ebdbb2"
@@ -37,3 +39,38 @@ blue    = "#83a598"
 magenta = "#d3869b"
 cyan    = "#8ec07c"
 white   = "#ebdbb2"
+
+#-------------------Light MODE-------------------------------
+#[colors.primary]
+#background = "#fbf1c7" # hi Normal guibg=#fbf1c7
+##background = "#ff0000" # hi Normal guibg=#fbf1c7
+#foreground = "#3c3836" # hi Normal guifg=#3c3836
+#
+#[colors.cursor]
+#text = "#fbf1c7"       # hi Cursor guifg=#fbf1c7
+#cursor = "#282828"     # hi Cursor guibg=#282828
+#
+#[colors.selection]
+#text = "#3c3836"       # hi Normal guifg (Para buen contraste)
+#background = "#e5d4b1" # hi CursorLine / Pmenu guibg
+#
+## Mapeo exacto de g:terminal_ansi_colors para el modo Light
+#[colors.normal]
+#black   = "#3c3836"
+#red     = "#cc241d"
+#green   = "#98971a"
+#yellow  = "#d79921"
+#blue    = "#458588"
+#magenta = "#b16286"
+#cyan    = "#689d6a"
+#white   = "#7c6f64"
+#
+#[colors.bright]
+#black   = "#928374"
+#red     = "#9d0006"
+#green   = "#79740e"
+#yellow  = "#b57614"
+#blue    = "#076678"
+#magenta = "#8f3f71"
+#cyan    = "#427b58"
+#white   = "#fbf1c7"
