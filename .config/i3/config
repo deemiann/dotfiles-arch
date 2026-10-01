@@ -50,8 +50,10 @@ client.urgent           #1c1c1c #cc241d #ffffff #cc241d #1c1c1c
 exec_always --no-startup-id feh -B "#1C1C1C" --bg-center ~/.config/images/archlinux_logo.svg
 
 # start firefox
-bindsym $mod+f exec --no-startup-id firefox
 bindsym $mod+b exec --no-startup-id brave
+bindsym $mod+t exec --no-startup-id thunar
+bindsym $mod+g exec --no-startup-id GTK_THEME=Adwaita:dark geeqie
+
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -101,7 +103,7 @@ bindsym $mod+Shift+s split h
 bindsym $mod+s split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+g fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+Tab layout stacking
