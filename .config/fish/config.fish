@@ -5,6 +5,12 @@ if status is-login
     end
 end
 
+# Aplicar el tema Gruvbox si estamos en una TTY pura
+#if test "$TERM" = "linux"
+    #echo -en (cat ~/.config/system-backup/tty-colors)
+#end
+
+
 set -g fish_greeting ""
 zoxide init fish | source
 

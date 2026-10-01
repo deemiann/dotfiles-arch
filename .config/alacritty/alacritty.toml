@@ -1,4 +1,6 @@
-# ──────────────────────────────────────────────────────────────────
+#[cursor]
+#style = { shape ="Block", blinking = "On" }
+#blink_interval = 250
 
 [font]
 #size = 10
