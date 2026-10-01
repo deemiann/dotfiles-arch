@@ -8,6 +8,9 @@ size = 9
 [font.normal]
 #family = "DejaVu Sans Mono Book"
 family = "JetBrainsMono Nerd Font"
+[font.offset]
+x = 0
+y = -4
 
 #-------------------Dark MODE--------------------------------
 [colors.primary]
