@@ -38,7 +38,7 @@ exec --no-startup-id nm-applet
 # configs
 title_align center
 default_border pixel 1
-default_floating_border pixel 5
+default_floating_border pixel 1
 hide_edge_borders smart
 
 client.focused          #689d6a #689d6a #1c1c1c #458588 #689d6a
